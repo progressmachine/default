@@ -24,3 +24,8 @@ print(first_letters)  # Output: ['a', 'b', 'c']
 matrix = [[1, 2], [3, 4], [5, 6]]
 flattened = [num for row in matrix for num in row]
 print(flattened)  # Output: [1, 2, 3, 4, 5, 6]
+
+# Get the length of each word
+words = ["hello", "world", "python", "rocks"]
+lengths = [len(word) for word in words]
+print(lengths)  # Output: [5, 5, 6, 5]
