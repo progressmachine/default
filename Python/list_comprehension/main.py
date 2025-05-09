@@ -10,3 +10,7 @@ print(evens)  # Output: [0, 2, 4, 6, 8]
 words = ["HELLO", "WORLD", "PYTHON"]
 lowercase_words = [word.lower() for word in words]
 print(lowercase_words)  # Output: ['hello', 'world', 'python']
+
+# Multiply each number from 1 to 5 by 10
+tens = [x * 10 for x in range(1, 6)]
+print(tens)  # Output: [10, 20, 30, 40, 50]
