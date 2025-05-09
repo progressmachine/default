@@ -19,3 +19,8 @@ print(tens)  # Output: [10, 20, 30, 40, 50]
 words = ["apple", "banana", "cherry"]
 first_letters = [word[0] for word in words]
 print(first_letters)  # Output: ['a', 'b', 'c']
+
+# Flatten a nested list into a single list
+matrix = [[1, 2], [3, 4], [5, 6]]
+flattened = [num for row in matrix for num in row]
+print(flattened)  # Output: [1, 2, 3, 4, 5, 6]
