@@ -39,3 +39,21 @@ print("".join(replaced))  # Output: '*d*c*t**n'
 # Square only the odd numbers from 0 to 9
 squares_of_odds = [x**2 for x in range(10) if x % 2 != 0]
 print(squares_of_odds)  # Output: [1, 9, 25, 49, 81]
+
+# Pull out all digits from a string
+text = "Room 42 is on floor 7."
+digits = [char for char in text if char.isdigit()]
+print(digits)  # Output: ['4', '2', '7']
+
+
+
+
+
+
+
+
+
+
+
+
+
