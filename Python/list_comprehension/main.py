@@ -29,3 +29,9 @@ print(flattened)  # Output: [1, 2, 3, 4, 5, 6]
 words = ["hello", "world", "python", "rocks"]
 lengths = [len(word) for word in words]
 print(lengths)  # Output: [5, 5, 6, 5]
+
+# Replace vowels in a word with '*'
+word = "education"
+vowels = "aeiou"
+replaced = ['*' if char in vowels else char for char in word]
+print("".join(replaced))  # Output: '*d*c*t**n'
