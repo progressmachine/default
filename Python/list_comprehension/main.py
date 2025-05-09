@@ -50,6 +50,14 @@ words = ["apple", "banana", "cherry"]
 reversed_words = [word[::-1] for word in words]
 print(reversed_words)  # Output: ['elppa', 'ananab', 'yrrehc']
 
+# Convert all words to uppercase
+words = ["hello", "world", "python"]
+uppercase_words = [word.upper() for word in words]
+print(uppercase_words)  # Output: ['HELLO', 'WORLD', 'PYTHON']
+
+
+
+
 
 
 
