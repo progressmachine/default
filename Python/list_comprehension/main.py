@@ -14,3 +14,8 @@ print(lowercase_words)  # Output: ['hello', 'world', 'python']
 # Multiply each number from 1 to 5 by 10
 tens = [x * 10 for x in range(1, 6)]
 print(tens)  # Output: [10, 20, 30, 40, 50]
+
+# Extract the first letter from each word
+words = ["apple", "banana", "cherry"]
+first_letters = [word[0] for word in words]
+print(first_letters)  # Output: ['a', 'b', 'c']
