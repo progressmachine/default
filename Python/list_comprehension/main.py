@@ -55,7 +55,11 @@ words = ["hello", "world", "python"]
 uppercase_words = [word.upper() for word in words]
 print(uppercase_words)  # Output: ['HELLO', 'WORLD', 'PYTHON']
 
-
+# Find common elements between two lists
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7]
+common = [x for x in list1 if x in list2]
+print(common)  # Output: [4, 5]
 
 
 
