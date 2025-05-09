@@ -45,7 +45,10 @@ text = "Room 42 is on floor 7."
 digits = [char for char in text if char.isdigit()]
 print(digits)  # Output: ['4', '2', '7']
 
-
+# Reverse each word in a list
+words = ["apple", "banana", "cherry"]
+reversed_words = [word[::-1] for word in words]
+print(reversed_words)  # Output: ['elppa', 'ananab', 'yrrehc']
 
 
 
