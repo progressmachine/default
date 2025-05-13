@@ -1,4 +1,3 @@
-# task_cli.py
 import sys
 import json
 import os
@@ -34,8 +33,45 @@ def add_task(description):
 
 def list_tasks():
     tasks = load_tasks()
+    if not tasks:
+        print("No tasks found.")
+        return
     for task in tasks:
         print(f"[{task['id']}] {task['description']} - {task['status']}")
+
+def delete_task(task_id):
+    tasks = load_tasks()
+    updated_tasks = [task for task in tasks if task['id'] != task_id]
+    if len(tasks) == len(updated_tasks):
+        print(f"No task found with ID {task_id}")
+        return
+    save_tasks(updated_tasks)
+    print(f"Task with ID {task_id} deleted.")
+
+def update_task(task_id, description=None, status=None):
+    tasks = load_tasks()
+    for task in tasks:
+        if task['id'] == task_id:
+            if description:
+                task['description'] = description
+            if status:
+                task['status'] = status
+            task['updatedAt'] = datetime.now().isoformat()
+            save_tasks(tasks)
+            print(f"Task {task_id} updated.")
+            return
+    print(f"No task found with ID {task_id}")
+
+def mark_done(task_id):
+    update_task(task_id, status="done")
+
+def reset_tasks():
+    confirm = input("Are you sure you want to delete ALL tasks? (yes/no): ")
+    if confirm.lower() == "yes":
+        save_tasks([])
+        print("All tasks have been deleted.")
+    else:
+        print("Reset cancelled.")
 
 # Entry point
 if __name__ == "__main__":
@@ -50,7 +86,48 @@ if __name__ == "__main__":
             print("Error: Task description required.")
         else:
             add_task(" ".join(sys.argv[2:]))
+
     elif command == "list":
         list_tasks()
+
+    elif command == "delete":
+        if len(sys.argv) < 3:
+            print("Error: Task ID required.")
+        else:
+            try:
+                task_id = int(sys.argv[2])
+                delete_task(task_id)
+            except ValueError:
+                print("Error: Task ID must be an integer.")
+
+    elif command == "update":
+        if len(sys.argv) < 3:
+            print("Error: Task ID required.")
+        else:
+            try:
+                task_id = int(sys.argv[2])
+                description = None
+                status = None
+                if "--desc" in sys.argv:
+                    description = sys.argv[sys.argv.index("--desc") + 1]
+                if "--status" in sys.argv:
+                    status = sys.argv[sys.argv.index("--status") + 1]
+                update_task(task_id, description, status)
+            except ValueError:
+                print("Error: Task ID must be an integer.")
+
+    elif command == "done":
+        if len(sys.argv) < 3:
+            print("Error: Task ID required.")
+        else:
+            try:
+                task_id = int(sys.argv[2])
+                mark_done(task_id)
+            except ValueError:
+                print("Error: Task ID must be an integer.")
+
+    elif command == "reset":
+        reset_tasks()
+
     else:
         print(f"Unknown command: {command}")
