@@ -1,0 +1,30 @@
+🔟 Simple CLI App Ideas (For Reps)
+	1.	Book List Manager
+	•	add, list, remove
+	•	Store title, author, and read/unread status
+	2.	Simple Habit Tracker
+	•	add, check, list
+	•	Store daily habits and whether they’re done
+	3.	Grocery List
+	•	add, remove, show
+	•	Just a plain list of items
+	4.	Daily Journal CLI
+	•	write, view [date]
+	•	Save journal entries by date
+	5.	Flashcard Creator
+	•	add, list, quiz
+	•	Save Q&A pairs and randomly quiz from them
+	6.	Budget Tracker
+	•	add (amount + category), summary, delete
+	•	Store expenses, calculate total spending
+	7.	Password Vault (plaintext for now)
+	•	add, get, list
+	•	Save service-name/passwords (for local testing only!)
+	8.	Simple Timer Log
+	•	start, stop, log
+	•	Track time spent on a task, calculate total
+	9.	Reading Log
+	•	add book, update pages, list progress
+	10.	Contact List CLI
+	•	add, list, search, remove
+	•	Store name + phone/email, search by name
