@@ -1,37 +1,16 @@
 [
   {
     "id": 1,
-    "description": "help me",
-    "status": "todo",
-    "createdAt": "2025-05-12T21:02:48.665161",
-    "updatedAt": "2025-05-12T21:02:48.665167"
+    "description": "Clean My Room",
+    "status": "done",
+    "createdAt": "2025-05-13T23:44:45.088412",
+    "updatedAt": "2025-05-13T23:45:55.552578"
   },
   {
     "id": 2,
-    "description": "what is this shit",
-    "status": "todo",
-    "createdAt": "2025-05-12T21:03:10.254993",
-    "updatedAt": "2025-05-12T21:03:10.254998"
-  },
-  {
-    "id": 3,
-    "description": "what is this shit",
-    "status": "todo",
-    "createdAt": "2025-05-12T21:03:11.716343",
-    "updatedAt": "2025-05-12T21:03:11.716348"
-  },
-  {
-    "id": 4,
-    "description": "my head hurts",
-    "status": "todo",
-    "createdAt": "2025-05-12T21:03:24.249852",
-    "updatedAt": "2025-05-12T21:03:24.249857"
-  },
-  {
-    "id": 5,
-    "description": "now what isn't working",
-    "status": "todo",
-    "createdAt": "2025-05-12T21:03:56.193188",
-    "updatedAt": "2025-05-12T21:03:56.193192"
+    "description": "take a shower",
+    "status": "done",
+    "createdAt": "2025-05-13T23:44:54.740146",
+    "updatedAt": "2025-05-13T23:46:31.669350"
   }
 ]
