@@ -28,3 +28,61 @@
 	10.	Contact List CLI
 	•	add, list, search, remove
 	•	Store name + phone/email, search by name
+
+You’re not biting off more than you can chew — you just need a clear, phased plan. Here’s one way to break it down into manageable steps:
+
+---
+
+## 🚀 Phase 1 – CLI Flashcards & Anki Export
+
+1. **Flashcard Storage**
+   – Keep your cards in a simple JSON file:
+
+   ```json
+   [
+     { "front": "Guten Morgen", "back": "Good morning" },
+     { "front": "Ich lerne Python", "back": "I’m learning Python" }
+   ]
+   ```
+2. **Review Loop**
+   – A Python CLI that reads your JSON deck, quizzes you, and records right/wrong.
+3. **Export to `.apkg`**
+   – Use the [`genanki`](https://github.com/kerrickstaley/genanki) library to package your JSON into an Anki deck file.
+   – You’ll end up with `my_deck.apkg` that you can import into AnkiDesktop or AnkiMobile.
+
+---
+
+## 🎨 Phase 2 – Simple Web Interface
+
+1. **Flask (or FastAPI) Backend**
+   – Endpoints to add/edit/delete cards (persist to JSON or a tiny SQLite DB).
+   – Endpoint to “Download Anki Deck” that streams your generated `.apkg`.
+2. **Vanilla JS Frontend**
+   – A clean, minimal UI to manage cards right in the browser.
+3. **PWA Wrapping**
+   – Make it installable on iPhone as a Progressive Web App (add to Home Screen).
+
+---
+
+## 📱 Phase 3 – Native iOS App (Optional)
+
+If you want to go fully native down the road:
+
+1. **BeeWare/Briefcase** or **Kivy-ios**
+   – Tools that let you package Python apps for iOS.
+2. **SwiftUI + PythonKit**
+   – Or learn a bit of Swift and call your Python logic via PythonKit.
+3. **App Store Deployment**
+   – Certificates, provisioning profiles, etc.
+
+---
+
+### 🔥 Next Step
+
+Which part sounds most exciting?
+
+* **CLI + Anki export** (Phase 1 MVP)
+* **Web-based PWA** (Phase 2)
+* **Jump straight to native iOS** (Phase 3)
+
+Let me know where you’d like to start, and we’ll build it step by step! 😎
