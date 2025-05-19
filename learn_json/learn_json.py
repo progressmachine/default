@@ -41,12 +41,16 @@ def interactive_learning():
     print("\n✅ Your data in Python dictionary:")
     print(user_dict)
 
+    # Convert dictionary to JSON string
     json_version = json.dumps(user_dict, indent=4)
     print("\n📄 Your data as JSON string:")
     print(json_version)
 
-    print("\n📚 Accessing values from JSON...")
-    print(f"Hello {user_dict['name']}! You know {len(user_dict['languages'])} languages.")
+    # Convert back to dictionary (simulate receiving JSON)
+    parsed_json = json.loads(json_version)
+
+    print("\n📚 Accessing values from JSON (converted back to dictionary)...")
+    print(f"Hello {parsed_json['name']}! You know {len(parsed_json['languages'])} languages.")
 
 def main():
     intro()
