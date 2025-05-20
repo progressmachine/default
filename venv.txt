@@ -1,0 +1,15 @@
+Enter your python project folder.
+
+  python3 -m venv venv
+
+  source venv/bin/activate
+
+You'll see somthing like:
+
+  pranishpradhan@192 Instagram Post Generator % 
+
+Then do your thing. Download stuff and work on your thing.
+
+Once you're done:
+
+  deactivate
