@@ -20,7 +20,7 @@ def show_tasks(tasks):
 
 def main():
     
-    # Ensure the file exists before loading
+    # Ensures the file exists before loading
     open("tasks.txt", "a").close()
     
     tasks = load_tasks()
