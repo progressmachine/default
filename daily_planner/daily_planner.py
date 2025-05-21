@@ -19,6 +19,10 @@ def show_tasks(tasks):
         print(f"{i + 1}. {task}")
 
 def main():
+    
+    # Ensure the file exists before loading
+    open("tasks.txt", "a").close()
+    
     tasks = load_tasks()
     
     while True:
