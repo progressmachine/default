@@ -1,0 +1,63 @@
+Alright, here’s a super simple explanation of APIs in Python — no tech jargon, no fluff. Just straight-up basics.
+
+⸻
+
+🔧 What’s an API?
+
+API = a waiter in a restaurant.
+You ask the waiter for food. The waiter goes to the kitchen and brings you back your dish.
+
+In programming, the kitchen = some server somewhere (like Google, weather app, etc).
+The API = the waiter that goes and brings back info.
+
+⸻
+
+🐍 Using APIs in Python
+
+Let’s say we want to ask a weather website what the weather is like in your city.
+
+We’ll use a simple GET request. That’s like saying:
+“Hey, give me the weather info.”
+
+You can do this using a Python library called requests.
+
+⸻
+
+💡 Example Code (Super Simple)
+
+import requests
+
+# This is a fake example URL of a weather API
+url = "https://api.weatherapi.com/v1/current.json"
+params = {
+    "key": "your_api_key",  # You get this when you sign up
+    "q": "Kathmandu",       # City name
+}
+
+response = requests.get(url, params=params)  # Ask the API for info
+
+data = response.json()  # Convert the response to Python dict
+
+# Now let's print something from that data
+print("Temperature:", data["current"]["temp_c"], "°C")
+
+
+⸻
+
+💭 What Just Happened?
+	1.	You used requests.get() to ask for data.
+	2.	You gave it a URL (like a phone number to call).
+	3.	The API answered.
+	4.	You turned that answer into a Python dictionary using .json().
+	5.	You picked the info you wanted from it.
+
+⸻
+
+🔑 Notes
+	•	Most APIs need a key — like a password.
+	•	You can find free APIs online (e.g., weather, jokes, Pokémon, etc.).
+	•	Always read the API’s documentation like you’d read a menu.
+
+⸻
+
+Want me to walk you through a real example with a free API you can try now?
