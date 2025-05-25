@@ -1,0 +1,92 @@
+// Program 1: Calculate Magnitude of a Vector using Classes
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Point {
+public:
+    double x, y;
+};
+
+class Vector {
+public:
+    Point start, end;
+};
+
+void calculateMagnitude(Vector v) {
+    float m;
+    m = sqrt(pow((v.end.x - v.start.x), 2) + pow((v.end.y - v.start.y), 2));
+    cout << "Magnitude = " << m << endl;
+}
+
+int main() {
+    Vector vec1;
+    vec1.start.x = 3.0;
+    vec1.start.y = 4.0;
+    vec1.end.x = 5.0;
+    vec1.end.y = 6.0;
+
+    calculateMagnitude(vec1);
+    return 0;
+}
+
+// Program 2: Calculate Distance Between Two Points using Structs
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+struct Point {
+    int x, y;
+};
+
+void calculateDistance(Point p1, Point p2) {
+    float d;
+    d = sqrt(pow((p2.x - p1.x), 2) + pow((p2.y - p1.y), 2));
+    cout << "The distance is: " << d << endl;
+}
+
+int main() {
+    Point p1, p2;
+
+    cout << "Enter coordinates for point 1 (x y): ";
+    cin >> p1.x >> p1.y;
+
+    cout << "Enter coordinates for point 2 (x y): ";
+    cin >> p2.x >> p2.y;
+
+    calculateDistance(p1, p2);
+    return 0;
+}
+
+// Program 3: Calculate Distance Between Two Points using Classes
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+class Point {
+public:
+    int x, y;
+};
+
+void calculateDistance(Point p1, Point p2) {
+    float d;
+    d = sqrt(pow((p2.x - p1.x), 2) + pow((p2.y - p1.y), 2));
+    cout << "The distance is: " << d << endl;
+}
+
+int main() {
+    Point p1, p2;
+
+    cout << "Enter coordinates for point 1 (x y): ";
+    cin >> p1.x >> p1.y;
+
+    cout << "Enter coordinates for point 2 (x y): ";
+    cin >> p2.x >> p2.y;
+
+    calculateDistance(p1, p2);
+    return 0;
+}
+
