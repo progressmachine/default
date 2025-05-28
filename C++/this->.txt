@@ -1,0 +1,10 @@
+class Example {
+public:
+    int x;
+
+    Example(int x) {
+        this->x = x;  // `this->x` refers to the class member; `x` is the parameter
+    }
+};
+
+Without this->, the compiler would be confused — it wouldn’t know whether you’re assigning the parameter x to itself or to the class member x.
